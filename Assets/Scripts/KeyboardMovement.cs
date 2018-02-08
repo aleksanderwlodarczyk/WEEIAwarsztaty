@@ -6,7 +6,7 @@ using UnityEngine;
 public class KeyboardMovement : MonoBehaviour {
 
 	public float speed = 10f;
-	public float jumpForce = 10f;
+	public float jumpForce = 50f;
 	public float maxSpeed = 7f;
 
 	private bool canJump;
@@ -37,6 +37,10 @@ public class KeyboardMovement : MonoBehaviour {
 			canJump = false;
 		}
 
+		if (!canJump && rb2d.velocity.y > 0 && rb2d.gravityScale <= 2f) {
+			rb2d.gravityScale += 0.07f;
+		}
+
 		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed)
 			realSpeed = 0;
 		else
@@ -44,7 +48,10 @@ public class KeyboardMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Ground")
+		if (coll.gameObject.tag == "Ground") {
 			canJump = true;
+			rb2d.gravityScale = 1;
+		}
+		
 	}
 }
