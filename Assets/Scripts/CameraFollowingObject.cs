@@ -19,26 +19,26 @@ public class CameraFollowingObject : MonoBehaviour {
 		offset = objectToFollow.transform.position - transform.position;
 		Debug.Log (offset);
 
-		if (offset.x > 5f && offset.y > 2f) {
-			Vector3 offsetWhenChange = new Vector3 (5f, 2f, offset.z);
+		if (offset.x > 4f && offset.y > 2f) {
+			Vector3 offsetWhenChange = new Vector3 (4f, 2f, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 			changingBoth = true;
 		}
 
-		if (offset.x > 5f && offset.y < -2f) {
-			Vector3 offsetWhenChange = new Vector3 (5f, -2f, offset.z);
+		if (offset.x > 4f && offset.y < -2f) {
+			Vector3 offsetWhenChange = new Vector3 (4f, -2f, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 			changingBoth = true;
 		}
 
-		if (offset.x < -5f && offset.y > 2f) {
-			Vector3 offsetWhenChange = new Vector3 (-5f, 2f, offset.z);
+		if (offset.x < -4f && offset.y > 2f) {
+			Vector3 offsetWhenChange = new Vector3 (-4f, 2f, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 			changingBoth = true;
 		}
 
-		if (offset.x < -5f && offset.y < -2f) {
-			Vector3 offsetWhenChange = new Vector3 (-5f, -2f, offset.z);
+		if (offset.x < -4f && offset.y < -2f) {
+			Vector3 offsetWhenChange = new Vector3 (-4f, -2f, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 			changingBoth = true;
 		}
@@ -46,13 +46,13 @@ public class CameraFollowingObject : MonoBehaviour {
 
 
 
-		if (offset.x > 5f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (5f, offset.y, offset.z);
+		if (offset.x > 4f && !changingBoth) {
+			Vector3 offsetWhenChange = new Vector3 (4f, offset.y, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 		}
 
-		if (offset.x < -5f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (-5f, offset.y, offset.z);
+		if (offset.x < -4f && !changingBoth) {
+			Vector3 offsetWhenChange = new Vector3 (-4f, offset.y, offset.z);
 			transform.position = objectToFollow.transform.position - offsetWhenChange;
 		}
 
