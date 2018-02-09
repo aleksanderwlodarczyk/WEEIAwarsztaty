@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollowingObject.cs" />
      <Compile Include="Assets\Scripts\Crystal.cs" />
+     <Compile Include="Assets\Scripts\Finish.cs" />
      <Compile Include="Assets\Scripts\KeyboardMovement.cs" />
      <Compile Include="Assets\Scripts\Killable.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
