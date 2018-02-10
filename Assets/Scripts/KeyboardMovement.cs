@@ -13,17 +13,22 @@ public class KeyboardMovement : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private float horizontal;
 	private float realSpeed;
+	private GameOver gOver;
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		realSpeed = speed;
 		canJump = true;
+		gOver = GameObject.Find ("GameOver").GetComponent<GameOver> ();
 	}
 	
 
 	void Update () {
-
-		horizontal = Input.GetAxis ("Horizontal");
+		if (gOver.playing) {
+			horizontal = Input.GetAxis ("Horizontal");
+		} else {
+			horizontal = 0;
+		}
 
 		rb2d.AddForce (Vector2.right * horizontal * realSpeed);
 

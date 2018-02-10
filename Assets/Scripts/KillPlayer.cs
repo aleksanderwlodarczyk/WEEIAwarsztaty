@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	private GameOver gOver;
+
+	void Start(){
+		gOver = GameObject.Find ("GameOver").GetComponent<GameOver> ();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
-		if (coll.gameObject.tag == "Player")
+		if (coll.gameObject.tag == "Player") {
 			coll.gameObject.GetComponent<Killable> ().Kill ();
+			gOver.Defeat ();
+		}
+		
 	}
 }
