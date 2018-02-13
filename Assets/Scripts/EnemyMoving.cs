@@ -4,27 +4,48 @@ using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour {
 
-    public bool canGo;
+    public bool canGoL;
+	public bool canGoR;
     public float speed = 10f;
 
     private GameOver gOver;
     private Rigidbody2D rb2d;
 
 	void Start () {
-        canGo = true;
+        canGoL = true;
+		canGoR = true;
         gOver = GameObject.Find("GameOver").GetComponent<GameOver>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+
+
 
     }
 
 
     void FixedUpdate()
     {
-        if(canGo && gOver.playing)
+        if(gOver.playing)
         {
-            rb2d.AddForce(Vector2.left * speed * Mathf.Sin(Time.time*3));
+			float sin = Mathf.Sin (Time.time * 2);
+			if (sin <= 0 && canGoL) {
+				rb2d.AddForce (Vector2.right * speed * sin);
+			} else if (!canGoL) {
+				Stop ();
+			}
+
+			if (sin > 0 && canGoR) {
+				rb2d.AddForce (Vector2.right * speed * sin);
+			} else if (!canGoR) {
+				Stop ();
+			}
+
+
         }
     }
-	
+
+
+	void Stop(){
+		rb2d.AddForce (rb2d.velocity * -10f);
+	}
 
 }
