@@ -42,7 +42,7 @@ public class KeyboardMovement : MonoBehaviour {
 			canJump = false;
 		}
 
-		if (!canJump && rb2d.velocity.y > 0 && rb2d.gravityScale <= 2f) {
+		if (!canJump && rb2d.velocity.y > 0 && rb2d.gravityScale <= 3f) {
 			rb2d.gravityScale += 0.07f;
 		}
 

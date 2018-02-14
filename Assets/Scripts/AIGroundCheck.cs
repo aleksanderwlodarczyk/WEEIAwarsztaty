@@ -19,9 +19,9 @@ public class AIGroundCheck : MonoBehaviour {
         if(other.gameObject.tag == "Ground")
         {
 			if (left)
-				gameObject.transform.parent.gameObject.GetComponent<EnemyMoving> ().canGoL = false;
+				gameObject.transform.parent.gameObject.GetComponent<AutoMoving> ().canGoL = false;
 			else
-				gameObject.transform.parent.gameObject.GetComponent<EnemyMoving> ().canGoR = false;
+				gameObject.transform.parent.gameObject.GetComponent<AutoMoving> ().canGoR = false;
         }
     }
 
@@ -30,9 +30,9 @@ public class AIGroundCheck : MonoBehaviour {
         if (other.gameObject.tag == "Ground")
         {
 			if (left)
-				gameObject.transform.parent.gameObject.GetComponent<EnemyMoving> ().canGoL = true;
+				gameObject.transform.parent.gameObject.GetComponent<AutoMoving> ().canGoL = true;
 			else
-				gameObject.transform.parent.gameObject.GetComponent<EnemyMoving> ().canGoR = true;
+				gameObject.transform.parent.gameObject.GetComponent<AutoMoving> ().canGoR = true;
         }
     }
 }
