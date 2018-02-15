@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4472048697925816}
   - component: {fileID: 212515415451750514}
   m_Layer: 0
-  m_Name: 32 x 32 platform character_idle_0
+  m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 70936229207581170}
   - component: {fileID: 114104734512675246}
   - component: {fileID: 114016452956272924}
+  - component: {fileID: 95807738359261828}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,6 +110,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.01}
   m_Size: {x: 0.28, y: 0.44}
   m_Direction: 0
+--- !u!95 &95807738359261828
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1957406072756782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b25654e6f3d1ad54b8e425310aab581e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114016452956272924
 MonoBehaviour:
   m_ObjectHideFlags: 1

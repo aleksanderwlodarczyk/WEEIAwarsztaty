@@ -15,6 +15,12 @@ public class KeyboardMovement : MonoBehaviour {
 	private float realSpeed;
 	private GameOver gOver;
 
+	public float Horizontal { 
+		get{
+			return horizontal;
+		}
+	}
+
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		realSpeed = speed;
@@ -39,6 +45,8 @@ public class KeyboardMovement : MonoBehaviour {
 
 		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && canJump) {
 			rb2d.AddForce (Vector2.up * jumpForce * 3);
+			if (gameObject.tag == "Player")
+				gameObject.GetComponent<Animator> ().SetTrigger ("jump");
 			canJump = false;
 		}
 
