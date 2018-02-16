@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\AutoMoving.cs" />
      <Compile Include="Assets\Scripts\CameraFollowingObject.cs" />
      <Compile Include="Assets\Scripts\Crystal.cs" />
+     <Compile Include="Assets\Scripts\EnemyAnim.cs" />
      <Compile Include="Assets\Scripts\Finish.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\KeyboardMovement.cs" />

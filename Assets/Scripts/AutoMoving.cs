@@ -10,6 +10,13 @@ public class AutoMoving : MonoBehaviour {
 
     private GameOver gOver;
     private Rigidbody2D rb2d;
+	private float sin;
+
+	public float Sin{
+		get{
+			return sin;
+		}
+	}
 
 	void Start () {
         canGoL = true;
@@ -26,7 +33,7 @@ public class AutoMoving : MonoBehaviour {
     {
 		if(gOver.playing && Mathf.Abs(rb2d.velocity.x) < 7f)
         {
-			float sin = Mathf.Sin (Time.time * 1.5f);
+			sin = Mathf.Sin (Time.time * 1.5f);
 			if (sin <= 0 && canGoL) {
 				rb2d.AddForce (Vector2.right * speed * sin);
 			} else if (!canGoL) {
