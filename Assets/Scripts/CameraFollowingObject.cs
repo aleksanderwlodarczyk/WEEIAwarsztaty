@@ -17,7 +17,6 @@ public class CameraFollowingObject : MonoBehaviour {
 
 	void Update () {
 		offset = objectToFollow.transform.position - transform.position;
-		Debug.Log (offset);
 
 		if (offset.x > 4f && offset.y > 2f) {
 			Vector3 offsetWhenChange = new Vector3 (4f, 2f, offset.z);

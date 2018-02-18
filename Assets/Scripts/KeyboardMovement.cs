@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class KeyboardMovement : MonoBehaviour {
@@ -10,10 +11,12 @@ public class KeyboardMovement : MonoBehaviour {
 	public float maxSpeed = 7f;
 
 	private bool canJump;
+	private bool canSpeedUp;
 	private Rigidbody2D rb2d;
 	private float horizontal;
 	private float realSpeed;
 	private GameOver gOver;
+
 
 	public float Horizontal { 
 		get{
@@ -26,6 +29,8 @@ public class KeyboardMovement : MonoBehaviour {
 		realSpeed = speed;
 		canJump = true;
 		gOver = GameObject.Find ("GameOver").GetComponent<GameOver> ();
+		canSpeedUp = true;
+
 	}
 	
 
@@ -35,13 +40,19 @@ public class KeyboardMovement : MonoBehaviour {
 		} else {
 			horizontal = 0;
 		}
+			
+		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed) {
+			canSpeedUp = false;
+		}	else 
+			canSpeedUp = true;
 
-		rb2d.AddForce (Vector2.right * horizontal * realSpeed);
-
-		if ((rb2d.velocity.x * horizontal) < 0)
-			realSpeed = 10 * speed;
-		else
+		if (rb2d.velocity.x * horizontal < 0) {
+			realSpeed += Mathf.Abs (rb2d.velocity.x);
+		} else
 			realSpeed = speed;
+
+
+		GameObject.Find ("ScoreText").GetComponent<Text> ().text = rb2d.velocity.x.ToString ();
 
 		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && canJump) {
 			rb2d.AddForce (Vector2.up * jumpForce * 3);
@@ -54,10 +65,9 @@ public class KeyboardMovement : MonoBehaviour {
 			rb2d.gravityScale += 0.07f;
 		}
 
-		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed)
-			realSpeed = 0;
-		else
-			realSpeed = speed;
+
+		if(canSpeedUp)
+			rb2d.AddForce (Vector2.right * horizontal * realSpeed);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
