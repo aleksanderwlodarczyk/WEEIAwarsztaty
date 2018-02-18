@@ -51,6 +51,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Package\Button i zmiana stanu obiektu\Bridge.cs" />
+     <Compile Include="Assets\Package\Button i zmiana stanu obiektu\Button.cs" />
+     <Compile Include="Assets\Package\Button i zmiana stanu obiektu\ButtonSwitchState.cs" />
+     <Compile Include="Assets\Package\Graphics\BlockPlatform.cs" />
+     <Compile Include="Assets\Package\Graphics\HorizontalRepeat.cs" />
+     <Compile Include="Assets\Package\Graphics\Lava.cs" />
+     <Compile Include="Assets\Package\Graphics\PlatformColorable\MPlatConnector.cs" />
+     <Compile Include="Assets\Package\Graphics\RepeatPlatform.cs" />
+     <Compile Include="Assets\Package\Graphics\RepeatSpriteBoundary.cs" />
+     <Compile Include="Assets\Package\Graphics\StretchPlatform.cs" />
+     <Compile Include="Assets\Package\Niszczenie\DestroyableObject.cs" />
+     <Compile Include="Assets\Package\Niszczenie\DestroyingObject.cs" />
+     <Compile Include="Assets\Package\OneWayPlatform.cs" />
+     <Compile Include="Assets\Package\Poruszanie\MovingObject.cs" />
+     <Compile Include="Assets\Package\Poruszanie\RotatingObject.cs" />
+     <Compile Include="Assets\Package\Teleporter.cs" />
      <Compile Include="Assets\Scripts\AIGroundCheck.cs" />
      <Compile Include="Assets\Scripts\AutoMoving.cs" />
      <Compile Include="Assets\Scripts\CameraFollowingObject.cs" />
@@ -64,6 +80,7 @@
      <Compile Include="Assets\Scripts\ManagingScene.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PointsHandler.cs" />
+     <Compile Include="Assets\Scripts\Teleport.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>D:/GitHubRepositories/WEEIAwarsztaty/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
