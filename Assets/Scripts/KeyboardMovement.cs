@@ -6,8 +6,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody2D))]
 public class KeyboardMovement : MonoBehaviour {
 
+	[Header("Prędkość postaci")]
 	public float speed = 10f;
+	[Header("Siła skoku")]
 	public float jumpForce = 50f;
+	[Header("Maksymalna prędkość")]
 	public float maxSpeed = 7f;
 
 	private bool canJump;

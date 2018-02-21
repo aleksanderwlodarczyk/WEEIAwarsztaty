@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour {
 
+	[Header("Dokąd przenieść")]
 	public Transform outputTransform;
+	[Header("Kogo przenieść")]
 	public string typeToTeleport;
 
 	private Transform objectToTeleport;

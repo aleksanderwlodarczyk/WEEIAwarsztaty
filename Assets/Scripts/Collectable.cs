@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crystal : MonoBehaviour {
+public class Collectable : MonoBehaviour {
 
+	[Header("Ilość punktów za zebranie")]
 	public int scoreToAdd = 1;
 
 	void FixedUpdate(){
+		//poruszanie sie gora/dol w zaleznosci od fcji sin
 		transform.Translate (Vector2.up * 0.008f * Mathf.Sin (Time.time*5));
 	}
 
