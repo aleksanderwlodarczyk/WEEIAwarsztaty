@@ -46,6 +46,7 @@ public class KeyboardMovement : MonoBehaviour {
 			
 		if (Mathf.Abs (rb2d.velocity.x) > maxSpeed) {
 			canSpeedUp = false;
+
 		}	else 
 			canSpeedUp = true;
 
@@ -59,12 +60,14 @@ public class KeyboardMovement : MonoBehaviour {
 
 		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && canJump) {
 			rb2d.AddForce (Vector2.up * jumpForce * 3);
+
 			if (gameObject.tag == "Player")
 				gameObject.GetComponent<Animator> ().SetTrigger ("jump");
 			canJump = false;
 		}
 
-		if (!canJump && rb2d.velocity.y > 0 && rb2d.gravityScale <= 3f) {
+		if (rb2d.velocity.y != 0f && rb2d.gravityScale <= 3f) {
+
 			rb2d.gravityScale += 0.07f;
 		}
 
