@@ -70,13 +70,18 @@ public class KeyboardMovement : MonoBehaviour {
 
 			rb2d.gravityScale += 0.07f;
 		}
-
-
-		if(canSpeedUp)
-			rb2d.AddForce (Vector2.right * horizontal * realSpeed);
 	}
 
-	void OnCollisionEnter2D(Collision2D coll){
+    private void FixedUpdate()
+    {
+        if (canSpeedUp)
+        {
+            var oldVelocity = rb2d.velocity;
+            rb2d.velocity =  new Vector2(1 * horizontal * realSpeed * Time.fixedDeltaTime, oldVelocity.y);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll){
 		if (coll.gameObject.tag == "Ground") {
 			canJump = true;
 			rb2d.gravityScale = 1;
