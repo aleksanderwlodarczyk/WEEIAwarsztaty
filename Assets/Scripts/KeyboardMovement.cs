@@ -56,7 +56,6 @@ public class KeyboardMovement : MonoBehaviour {
 			realSpeed = speed;
 
 
-		GameObject.Find ("ScoreText").GetComponent<Text> ().text = rb2d.velocity.x.ToString ();
 
 		if ((Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && canJump) {
 			rb2d.AddForce (Vector2.up * jumpForce * 3);
