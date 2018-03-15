@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798576995530134}
   - component: {fileID: 61556560472329416}
-  - component: {fileID: 114745790871421546}
+  - component: {fileID: 114444483838670150}
   m_Layer: 0
   m_Name: spikes
   m_TagString: Untagged
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241691603951884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 12.370438, z: 0}
+  m_LocalPosition: {x: 1.1879313, y: -1.1871899, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4013482204239202}
@@ -96,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1557035, y: 1.044487}
   m_EdgeRadius: 0
---- !u!114 &114745790871421546
+--- !u!114 &114444483838670150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f69ad02dada5df4f955ea14cede6899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathParticles: {fileID: 1979349568554034, guid: 417c7a7c8670b744d911b5ef9956f140,
+    type: 2}
 --- !u!212 &212420273637459066
 SpriteRenderer:
   m_ObjectHideFlags: 1

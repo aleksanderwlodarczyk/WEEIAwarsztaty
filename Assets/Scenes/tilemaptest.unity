@@ -151,7 +151,7 @@ Transform:
   m_Children:
   - {fileID: 1145798143}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179962295
 GameObject:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415bbfaa87560fb43a2a9eb72e42c30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playing: 0
+  playing: 1
 --- !u!4 &179962297
 Transform:
   m_ObjectHideFlags: 0
@@ -192,8 +192,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &349674197
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.1879313
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.1871899
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798576995530134, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 43ff0e82a6f0d8a49a9d235a93e9ccbb, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1019083875
 Prefab:
   m_ObjectHideFlags: 0
@@ -231,7 +273,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4415122387126558, guid: e10a04cb56b342d4f80ee1a66df4211d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e10a04cb56b342d4f80ee1a66df4211d, type: 2}
@@ -851,14 +893,6 @@ CompositeCollider2D:
         Y: 18600000
       - X: 120400008
         Y: 18600000
-    - - X: 240400016
-        Y: 1399999
-      - X: 131600008
-        Y: 1399999
-      - X: 131600008
-        Y: -11400000
-      - X: 240400016
-        Y: -11400000
     - - X: 84400008
         Y: 1399999
       - X: 23600002
@@ -866,6 +900,14 @@ CompositeCollider2D:
       - X: 23600002
         Y: -11400000
       - X: 84400008
+        Y: -11400000
+    - - X: 240400016
+        Y: 1399999
+      - X: 131600008
+        Y: 1399999
+      - X: 131600008
+        Y: -11400000
+      - X: 240400016
         Y: -11400000
     - - X: 108400008
         Y: -18600002
@@ -885,14 +927,14 @@ CompositeCollider2D:
       - {x: 2.3600001, y: 3.1399999}
       - {x: 2.3600001, y: 1.86}
       - {x: 12.040001, y: 1.86}
-    - - {x: 24.040003, y: 0.1399999}
-      - {x: 13.160001, y: 0.1399999}
-      - {x: 13.160001, y: -1.14}
-      - {x: 24.040003, y: -1.14}
     - - {x: 8.440001, y: 0.1399999}
       - {x: 2.3600001, y: 0.1399999}
       - {x: 2.3600001, y: -1.14}
       - {x: 8.440001, y: -1.14}
+    - - {x: 24.040003, y: 0.1399999}
+      - {x: 13.160001, y: 0.1399999}
+      - {x: 13.160001, y: -1.14}
+      - {x: 24.040003, y: -1.14}
     - - {x: 10.840001, y: -1.8600003}
       - {x: -10.84, y: -1.8600003}
       - {x: -10.84, y: -3.1399999}
