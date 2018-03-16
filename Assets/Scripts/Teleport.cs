@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour {
 
+	[HideInInspector]
+	public GameObject teleportParticle;
+
 	[Header("Dokąd przenieść")]
 	public Transform outputTransform;
 	[Header("Kogo przenieść")]
@@ -12,6 +15,7 @@ public class Teleport : MonoBehaviour {
 	private Transform objectToTeleport;
 	
 	void Teleporting(){
+		Instantiate (teleportParticle, outputTransform.position, new Quaternion (0f, 0f, 0f, 0f), gameObject.transform);
 		objectToTeleport.position = outputTransform.position;
 	}
 
