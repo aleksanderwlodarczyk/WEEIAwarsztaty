@@ -35,13 +35,13 @@ public class AutoMoving : MonoBehaviour {
         {
 			sin = Mathf.Sin (Time.time * 1.5f);
 			if (sin <= 0 && canGoL) {
-				rb2d.AddForce (Vector2.right * speed * sin);
+				rb2d.velocity = (Vector2.right * speed * sin);
 			} else if (!canGoL) {
 				Stop ();
 			}
 
 			if (sin > 0 && canGoR) {
-				rb2d.AddForce (Vector2.right * speed * sin);
+				rb2d.velocity = (Vector2.right * speed * sin);
 			} else if (!canGoR) {
 				Stop ();
 			}

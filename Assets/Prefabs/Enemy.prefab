@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61772845971822222}
   - component: {fileID: 50883388026963040}
   - component: {fileID: 114126434723217818}
-  - component: {fileID: 114350929590502190}
+  - component: {fileID: 114329989827152988}
   - component: {fileID: 114906822278008564}
   - component: {fileID: 95509280299104156}
   - component: {fileID: 114693816106098236}
@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1503132494048664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.6, y: 12.311, z: -0.04214382}
+  m_LocalPosition: {x: 12.197098, y: -2.295979, z: -0.04214382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4425512971541728}
@@ -318,7 +318,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGoL: 0
   canGoR: 0
-  speed: 10
+  speed: 3.7
+--- !u!114 &114329989827152988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1503132494048664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f69ad02dada5df4f955ea14cede6899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathParticles: {fileID: 1979349568554034, guid: 417c7a7c8670b744d911b5ef9956f140,
+    type: 2}
 --- !u!114 &114337323093360334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -328,17 +341,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 367af3b68071f324098d47885b6189af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114350929590502190
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1503132494048664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f69ad02dada5df4f955ea14cede6899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114486080851534982

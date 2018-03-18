@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour {
 
-	private GameObject winningScreen;
+	public GameObject winningScreen;
 	private GameOver gOver;
 
 	void Start () {
-		winningScreen = GameObject.Find ("winscreen");
 		gOver = GameObject.Find ("GameOver").GetComponent<GameOver> ();
-		winningScreen.SetActive (false);
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){

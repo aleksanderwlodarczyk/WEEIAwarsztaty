@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour {
 
-	private GameObject loseScreen;
+	public GameObject loseScreen;
 	public bool playing;
 
 	void Start () {
-		loseScreen = GameObject.Find ("losescreen");
-		loseScreen.SetActive (false);
-
 		playing = true;
 	}
 
