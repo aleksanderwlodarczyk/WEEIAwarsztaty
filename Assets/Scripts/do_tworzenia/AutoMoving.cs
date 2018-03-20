@@ -25,7 +25,8 @@ public class AutoMoving : MonoBehaviour {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
 
 
-
+		gameObject.transform.GetChild (1).gameObject.GetComponent<AIGroundCheck> ().onGround = false;
+		gameObject.transform.GetChild (2).gameObject.GetComponent<AIGroundCheck> ().onGround = false;
     }
 
 
@@ -53,6 +54,13 @@ public class AutoMoving : MonoBehaviour {
 
 	void Stop(){
 		rb2d.AddForce (rb2d.velocity * -10f);
+	}
+
+	void OnCollisionEnter2D(Collision2D coll){
+		if (coll.gameObject.tag == "Ground") {
+			gameObject.transform.GetChild (1).gameObject.GetComponent<AIGroundCheck> ().onGround = true;
+			gameObject.transform.GetChild (2).gameObject.GetComponent<AIGroundCheck> ().onGround = true;
+		}
 	}
 
 }
