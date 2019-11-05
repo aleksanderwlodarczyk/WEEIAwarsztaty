@@ -16,55 +16,66 @@ public class CameraFollowingObject : MonoBehaviour {
 	
 
 	void Update () {
-		offset = objectToFollow.transform.position - transform.position;
 
-		if (offset.x > 4f && offset.y > 2f) {
-			Vector3 offsetWhenChange = new Vector3 (4f, 2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-			changingBoth = true;
-		}
+        if (objectToFollow != null)
+        {
+            offset = objectToFollow.transform.position - transform.position;
 
-		if (offset.x > 4f && offset.y < -2f) {
-			Vector3 offsetWhenChange = new Vector3 (4f, -2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-			changingBoth = true;
-		}
+            if (offset.x > 4f && offset.y > 2f)
+            {
+                Vector3 offsetWhenChange = new Vector3(4f, 2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+                changingBoth = true;
+            }
 
-		if (offset.x < -4f && offset.y > 2f) {
-			Vector3 offsetWhenChange = new Vector3 (-4f, 2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-			changingBoth = true;
-		}
+            if (offset.x > 4f && offset.y < -2f)
+            {
+                Vector3 offsetWhenChange = new Vector3(4f, -2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+                changingBoth = true;
+            }
 
-		if (offset.x < -4f && offset.y < -2f) {
-			Vector3 offsetWhenChange = new Vector3 (-4f, -2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-			changingBoth = true;
-		}
+            if (offset.x < -4f && offset.y > 2f)
+            {
+                Vector3 offsetWhenChange = new Vector3(-4f, 2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+                changingBoth = true;
+            }
+
+            if (offset.x < -4f && offset.y < -2f)
+            {
+                Vector3 offsetWhenChange = new Vector3(-4f, -2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+                changingBoth = true;
+            }
 
 
 
 
-		if (offset.x > 4f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (4f, offset.y, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-		}
+            if (offset.x > 4f && !changingBoth)
+            {
+                Vector3 offsetWhenChange = new Vector3(4f, offset.y, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+            }
 
-		if (offset.x < -4f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (-4f, offset.y, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-		}
+            if (offset.x < -4f && !changingBoth)
+            {
+                Vector3 offsetWhenChange = new Vector3(-4f, offset.y, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+            }
 
-		if (offset.y > 2f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (offset.x, 2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-		}
+            if (offset.y > 2f && !changingBoth)
+            {
+                Vector3 offsetWhenChange = new Vector3(offset.x, 2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+            }
 
-		if (offset.y < -2f && !changingBoth) {
-			Vector3 offsetWhenChange = new Vector3 (offset.x, -2f, offset.z);
-			transform.position = objectToFollow.transform.position - offsetWhenChange;
-		}
-
+            if (offset.y < -2f && !changingBoth)
+            {
+                Vector3 offsetWhenChange = new Vector3(offset.x, -2f, offset.z);
+                transform.position = objectToFollow.transform.position - offsetWhenChange;
+            }
+        }
 		changingBoth = false;
 	}
 		
